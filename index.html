@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan de formation — IA, Automatisation & Vibe Coding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Epilogue:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f6f3ee;
+      color: #1a1a1f;
+      font-family: 'Epilogue', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #B5AA9D;
+    }
+
+    .header h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .header h1 span {
+      display: block;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #6b5e4f;
+      margin-top: 0.2rem;
+    }
+
+    .header-meta {
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      color: #6b5e4f;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .intro {
+      font-size: 1rem;
+      color: #3a3a42;
+      margin-bottom: 2.5rem;
+    }
+
+    .intro p + p {
+      margin-top: 0.8rem;
+    }
+
+    hr {
+      display: none;
+    }
+
+    /* Module */
+    .module {
+      margin-bottom: 3rem;
+    }
+
+    .module-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1.5px solid #B5AA9D;
+    }
+
+    .module-header h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .module-meta {
+      font-size: 0.82rem;
+      color: #6b5e4f;
+      margin-top: 0.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .module-intro {
+      font-size: 0.95rem;
+      color: #3a3a42;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+
+    /* Sessions */
+    .session {
+      margin-bottom: 1.2rem;
+    }
+
+    .session-title {
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b5e4f;
+      margin-bottom: 0.2rem;
+    }
+
+    .session-body {
+      font-size: 0.95rem;
+      color: #2a2a30;
+      line-height: 1.65;
+    }
+
+    /* Coaching bloc */
+    .coaching-bloc {
+      background: rgba(181, 170, 157, 0.15);
+      border-left: 2px solid #B5AA9D;
+      padding: 1rem 1.2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .coaching-bloc h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .coaching-bloc p {
+      font-size: 0.93rem;
+      color: #3a3a42;
+    }
+
+    /* Table */
+    .table-section h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1.5px solid #B5AA9D;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    th {
+      text-align: left;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6b5e4f;
+      font-weight: 500;
+      padding: 0.5rem 0.7rem;
+      border-bottom: 1px solid #B5AA9D;
+    }
+
+    td {
+      padding: 0.55rem 0.7rem;
+      border-bottom: 1px solid rgba(181, 170, 157, 0.4);
+      color: #2a2a30;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+      font-weight: 500;
+      color: #1a1a1f;
+    }
+
+    .table-note {
+      font-size: 0.88rem;
+      color: #6b5e4f;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #B5AA9D;
+      font-size: 0.85rem;
+      color: #6b5e4f;
+      line-height: 1.6;
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .container { padding: 2rem 1.2rem 3rem; }
+      .header h1 { font-size: 1.6rem; }
+      table { font-size: 0.82rem; }
+      th, td { padding: 0.45rem 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <h1>Plan de formation
+        <span>IA, Automatisation & Vibe Coding</span>
+      </h1>
+      <div class="header-meta">
+        <strong>Formateur :</strong> Lorenz Campan, Consultant IA &amp; Automatisation<br>
+        <strong>Format :</strong> Sessions individuelles de 1h30 à 2h, présentiel ou visio selon nos agendas
+      </div>
+    </header>
+
+    <div class="intro">
+      <p>Ce parcours n'est pas un cours de code. C'est un accompagnement pour que tu sois autonome sur ton projet : prototyper, automatiser et déployer sans faire appel à un développeur.</p>
+      <p>L'ordre est pensé pour que chaque bloc prépare le suivant : d'abord comprendre vraiment comment l'IA fonctionne, ensuite automatiser des tâches avec elle, enfin construire ton app. À chaque étape, on alterne théorie et pratique, avec des cas concrets.</p>
+    </div>
+
+    <div class="module">
+      <div class="module-header">
+        <h2>Module 1 : IA Générative &amp; Fondamentaux</h2>
+        <div class="module-meta">4 sessions &middot; environ 6 à 7h</div>
+      </div>
+      <p class="module-intro">On commence par comprendre ce que l'IA est vraiment, sans le marketing.</p>
+
+      <div class="session">
+        <div class="session-title">Session 1 : Comment ça marche</div>
+        <div class="session-body">Les bases techniques vulgarisées : machine learning, LLMs, transformers, tokens, fenêtre de contexte. Et les limites qu'il faut connaître : hallucinations, biais, RGPD. Ces fondamentaux ne sont pas de la culture générale : c'est ce qui te permettra de construire des systèmes fiables dans les modules suivants.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 2 : Panorama des outils &amp; choisir le bon modèle</div>
+        <div class="session-body">Tour des grandes catégories d'IA (texte, image, vidéo, son) avec mise en pratique sur chacune. Et surtout : comment choisir le bon modèle selon la tâche, avec les critères qui comptent vraiment (raisonnement, contexte, coût, confidentialité).</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 3 : Prompt Engineering</div>
+        <div class="session-body">La compétence clé. Structure d'un prompt efficace, few-shot, chain of thought, structured output, system prompts. Et les paramètres des modèles (température, top P…) pour affiner les résultats. On s'entraîne sur des cas concrets.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 4 : Assistants IA, projets &amp; RAG</div>
+        <div class="session-body">Créer un assistant IA personnalisé et persistant avec Claude Projects ou ChatGPT. Introduction au RAG (Retrieval Augmented Generation) : comment donner à l'IA accès à tes propres documents (CVs, fiches de poste, contrats) sans l'entraîner. Directement pertinent pour ton app.</div>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="module-header">
+        <h2>Module 2 : Automatisation</h2>
+        <div class="module-meta">6 sessions &middot; environ 8 à 9h</div>
+      </div>
+      <p class="module-intro">Faire travailler les outils à ta place sur tout ce qui est répétitif.</p>
+
+      <div class="session">
+        <div class="session-title">Session 5 : Introduction</div>
+        <div class="session-body">La logique d'une automatisation (trigger → condition → action), panorama des outils (Make, n8n, Zapier), premier cas pratique reproductible en live.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 6 : Make</div>
+        <div class="session-body">Prise en main complète : scénarios, modules, routes, itérateurs, gestion des erreurs. Cas pratique fil rouge.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 7 : API, Webhook, HTTP, MCP</div>
+        <div class="session-body">Les concepts derrière tous les outils d'automatisation, expliqués sans jargon. Mise en pratique avec le HTTP node pour appeler n'importe quelle API sans coder.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 8 : n8n</div>
+        <div class="session-body">L'outil d'automatisation avancé. Interface, nœuds essentiels, expressions, connexion de services. Gestion des coûts quand on appelle des modèles IA depuis un workflow.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 9 : Agents IA</div>
+        <div class="session-body">La différence entre une automatisation classique et un agent qui prend des décisions. Construction d'agents dans n8n : outils, mémoire, cas pratiques concrets.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 10 : Cas pratiques &amp; panorama no-code</div>
+        <div class="session-body">Consolidation avec des workflows réels. Tour rapide d'un ou deux outils no-code pour avoir le panorama complet.</div>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="module-header">
+        <h2>Module 3 : Vibe Coding</h2>
+        <div class="module-meta">8 sessions &middot; environ 11 à 12h</div>
+      </div>
+      <p class="module-intro">Prototyper et déployer ton app avec l'IA comme co-développeur.</p>
+
+      <div class="session">
+        <div class="session-title">Session 11 : Introduction &amp; panorama des outils</div>
+        <div class="session-body">Philosophie du vibe coding et boucle de travail. Tour des principales plateformes de vibe coding : Lovable, Bolt, Base44, v0, Replit, Cursor. L'objectif est d'avoir le panorama et de savoir vers quoi se tourner selon son projet et son niveau.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 12 : Fondamentaux coding</div>
+        <div class="session-body">Pas pour apprendre à coder, mais pour comprendre à quoi sert chaque couche. HTML, CSS, JavaScript, React, frontend/backend, Supabase, GitHub, hébergement. Ce qu'il faut savoir pour diriger l'IA sans être dans le flou.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 13 : Specs &amp; PRD</div>
+        <div class="session-body">Avant de toucher au code : rédiger une spec solide. Structure d'un bon PRD, cas pratique sur ton projet, et comment la spec devient le point de départ de tout le développement.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 14 : Écosystème agentique</div>
+        <div class="session-body">Claude Code, Codex, Cowork, harnais agentiques et leur logique commune. Les fichiers .md à la racine d'un projet, les skills, les plugins, la gestion du contexte et de la mémoire. Ce qui fait passer du vibe coding itératif au vibe coding en autopilote.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 15 : Vibe coding avancé</div>
+        <div class="session-body">Refactoring et nettoyage du code avec des skills dédiés. Agent teams et parallélisation. Connexion des workflows n8n à l'app.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Session 16 : Sécurité</div>
+        <div class="session-body">Les réflexes incontournables : variables d'environnement, .gitignore, gestion des clés, authentification, RGPD basique. Comment auditer la sécurité d'un projet vibe-codé.</div>
+      </div>
+
+      <div class="session">
+        <div class="session-title">Sessions 17 &amp; 18 : Cas pratiques &amp; déploiement</div>
+        <div class="session-body">Construction d'une fonctionnalité concrète du projet en live, connexion des automatisations, déploiement GitHub → Vercel. Environnements dev/prod, tests manuels. Bilan et plan d'autonomie pour la suite.</div>
+      </div>
+    </div>
+
+    <div class="coaching-bloc">
+      <h2>Phases de coaching projet</h2>
+      <p>En parallèle ou en suite des modules, des sessions dédiées à ton projet : déblocage, review, validation d'architecture, préparation d'une démo. Format et rythme à définir selon les besoins.</p>
+    </div>
+
+    <div class="table-section">
+      <h2>Récapitulatif</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Module</th>
+            <th>Sessions</th>
+            <th>Durée estimée</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 : IA Générative &amp; Fondamentaux</td>
+            <td>4</td>
+            <td>~6-7h</td>
+          </tr>
+          <tr>
+            <td>2 : Automatisation</td>
+            <td>6</td>
+            <td>~8-9h</td>
+          </tr>
+          <tr>
+            <td>3 : Vibe Coding</td>
+            <td>8</td>
+            <td>~11-12h</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>~18 sessions</strong></td>
+            <td><strong>~25-28h</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table-note">Rythme indicatif : 1 session par semaine. Programme évolutif, ajustable selon ta progression et tes projets en cours.</p>
+    </div>
+
+    <footer class="footer">
+      Lorenz Campan, Consultant IA &amp; Automatisation<br>
+      contact.lorenzcampan@gmail.com
+    </footer>
+
+  </div>
+</body>
+</html>
